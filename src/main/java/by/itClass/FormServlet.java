@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-@WebServlet(name = "FormServlet",urlPatterns = "/form")
+@WebServlet(name = "formServlet",urlPatterns = "/form")
 public class FormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -31,5 +31,7 @@ public class FormServlet extends HttpServlet {
                    .forEach(it->writer.write("<li>" +it +"</li>"));
            writer.write("</ol>");
        }
+
+       //http://localhost:8080
     }
 }

@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "oneParameterServlet", urlPatterns = "/oneParam") // говорим веб сервису на который мы отправляем
-// oneParameterServlet -имя  /oneParam - патерн
+// oneParameterServlet -имя  /oneParam - паттерн
 public class OneParameterServlet extends HttpServlet {
     // отправляем запрос из браузера
 
@@ -20,6 +20,8 @@ public class OneParameterServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter(); // поток в браузер
         writer.write("<h1>" + param + "</h1>");
+
+         // http://localhost:8080/oneParam?parame=Hello
     }
 
 
